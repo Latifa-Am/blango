@@ -1,7 +1,8 @@
 from django.urls import path, include
+from blog.api.views import PostList, PostDetail
 from rest_framework.urlpatterns import format_suffix_patterns
 from rest_framework.authtoken import views
-from blog.api.views import PostList, PostDetail
+
 
 urlpatterns = [
     path("posts/", PostList.as_view(), name="api_post_list"),

@@ -11,6 +11,7 @@ logger = logging.getLogger(__name__)
 # Creating views
 @cache_page(300)
 @vary_on_cookie
+
 def index(request):
     """
     from django.http import HttpResponse

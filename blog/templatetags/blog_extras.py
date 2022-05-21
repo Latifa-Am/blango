@@ -1,7 +1,6 @@
 from django.contrib.auth import get_user_model
 from django import template
-from django.utils.html import escape,format_html
-from django.utils.safestring import mark_safe
+from django.utils.html import format_html
 from blog.models import Post
 import logging
 
