@@ -93,7 +93,8 @@ class Dev(Configuration):
         "allauth",
         "allauth.account",
         "allauth.socialaccount",
-        "allauth.socialaccount.providers.google"
+        "allauth.socialaccount.providers.google",
+        "rest_framework.authtoken"
         
     ]
 
@@ -163,7 +164,15 @@ class Dev(Configuration):
       'django.contrib.auth.hashers.PBKDF2PasswordHasher',
       'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
       'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-  ]
+    ]
+    REST_FRAMEWORK = {
+        "DEFAULT_AUTHENTICATION_CLASSES": [
+            "rest_framework.authentication.BasicAuthentication",
+            "rest_framework.authentication.SessionAuthentication",
+            "rest_framework.authentication.TokenAuthentication",
+        ]
+    }
+    
 
     # Internationalization
     # https://docs.djangoproject.com/en/3.2/topics/i18n/
